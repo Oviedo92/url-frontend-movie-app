@@ -1,0 +1,13 @@
+# Regla 1: Redirección Inteligente para el Deep Link Principal.
+# Cuando alguien visita https://TUDOMINIO/app, el código 302 (redirección temporal)
+# hará que el teléfono Android intente abrir la app primero, gracias a App Links.
+# Si la app no está instalada, el navegador seguirá la redirección a la raiz (index.html).
+/app / 302
+
+# Regla 2: Ruta clara para la descarga directa del APK.
+# Si el usuario hace clic en un botón de descarga, lo dirigimos al archivo.
+/descargar /app-release.apk 302
+
+# Regla 3: Asegurar que el APK se sirva correctamente con el Content-Type adecuado.
+# Esto es esencial para que el navegador lo identifique como un archivo de instalación.
+/app-release.apk /app-release.apk 200 Content-Type=application/vnd.android.package-archive

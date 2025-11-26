@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.perpetron", 
+      "sha256_cert_fingerprints": [
+        "6B:F4:67:CE:68:E0:C4:0F:FE:D9:A0:C8:B2:AF:0C:25:D3:11:00:1B:E0:D4:8B:7B:FA:FF:CC:A4:4C:70:99:07"
+      ]
+    }
+  }
+]
